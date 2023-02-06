@@ -346,37 +346,37 @@ print(s1-s2)
 #                 min1=lst[k]
 #     print("#%d %d" %(i+1, max1-min1))
 
-T=int(input())
+# T=int(input())
 
-for i in range(T):
-    K ,N, M=[*map(int,input().split())]
-    charge=[*map(int,input().split())]
-    bus_stop=[j for j in range(N+1)]
-    charge.insert(0,0)
-    charge.append(N)
-    dis_check=0
-    for j in range(len(charge)-1):
-        if charge[j+1]-charge[j]>K:
-            dis_check+=1
-    if dis_check>0:
-        print("#%d %d" %(i+1, 0))
-    else:
-        check_charge=0
-        charge_dis=[]
-        for j in range(len(charge)-1):
-            charge_dis.append(charge[j+1]-charge[j])
-        temp=charge_dis
-        dis_sum=charge_dis[0]
-        charge_check=0
-        while len(charge_dis)!=0:
-            if dis_sum<=K:
-                dis_sum+=charge_dis[1]
-            else:
-                charge_check+=1
-                cnt+=1
-                del charge_dis[:cnt+1]
-                dis_sum=charge_dis[0]
-        print("#%d %d" %(i+1, charge_check))        
+# for i in range(T):
+#     K ,N, M=[*map(int,input().split())]
+#     charge=[*map(int,input().split())]
+#     bus_stop=[j for j in range(N+1)]
+#     charge.insert(0,0)
+#     charge.append(N)
+#     dis_check=0
+#     for j in range(len(charge)-1):
+#         if charge[j+1]-charge[j]>K:
+#             dis_check+=1
+#     if dis_check>0:
+#         print("#%d %d" %(i+1, 0))
+#     else:
+#         check_charge=0
+#         charge_dis=[]
+#         for j in range(len(charge)-1):
+#             charge_dis.append(charge[j+1]-charge[j])
+#         temp=charge_dis
+#         dis_sum=charge_dis[0]
+#         charge_check=0
+#         while len(charge_dis)!=0:
+#             if dis_sum<=K:
+#                 dis_sum+=charge_dis[1]
+#             else:
+#                 charge_check+=1
+#                 cnt+=1
+#                 del charge_dis[:cnt+1]
+#                 dis_sum=charge_dis[0]
+#         print("#%d %d" %(i+1, charge_check))        
         # for j in range(len(temp)):
         #     dis_sum=0
         #     cnt=0
@@ -390,5 +390,4 @@ for i in range(T):
         #     del charge_dis[:cnt+1]
         #print("#%d %d" %(i+1, check_charge))
                         
-            
             
