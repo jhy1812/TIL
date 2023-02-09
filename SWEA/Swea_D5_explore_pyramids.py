@@ -1,7 +1,11 @@
-T = int(input())
+# 민지와 보물 위치 정보를 각각 몇번째 줄의 몇번째 칸인지 좌표로 변환하여 풀이
+# 좌표로 변환했을 때 각 좌표의 차이가 같은 부호면 
+
+
+T = int(input())                                                    # 테스트 케이스
 
 for tc in range(1, T+1):
-    minji, treasure = [*map(int, input().split())]
+    minji, treasure = [*map(int, input().split())]                  # 민지와 보물 위치 정보
 
     minji_y, treasure_y = minji, treasure
     minji_x, treasure_x = 0, 0
